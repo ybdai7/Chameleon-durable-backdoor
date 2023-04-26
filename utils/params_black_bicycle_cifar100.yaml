@@ -1,0 +1,158 @@
+---
+
+type: image
+dataset: cifar100
+test_batch_size: 1000
+lr: 0.001 #0.001
+target_lr: 0.2
+momentum: 0.9
+momentum_contrastive: 0.9
+decay: 0.0005
+decay_contrastive: 0.0005
+batch_size: 64
+
+no_models: 10
+epochs: 10000
+retrain_no_times: 2
+regularize_batch: true
+regularize_len: 21
+
+number_of_total_participants: 100 #100
+sampling_dirichlet: true
+dirichlet_alpha: 0.9
+eta: 0.5 #1
+
+save_model: true
+save_on_epochs: [1000,1500,1800,1850,1900,1950,2001,2019,2040,2100,2149,2200,2249]
+### choose certain break point
+#resumed_model: 
+resumed_model: false
+
+environment_name: ppdl_experiment_cifar100_black_bicycle
+report_train_loss: true
+report_test_loss: true
+report_poison_loss: true
+track_distance: false
+track_clusters: false
+log_interval: 10
+
+modify_poison: false
+
+# file names of the images
+poison_type: wall
+
+# manually chosen images for tests
+poison_images_test:
+  - 17379
+  - 19511
+  - 25509
+
+poison_images:
+  - 29185
+  - 33948
+  - 45676
+  - 49962
+
+
+#  image_29911.jpg
+label_flip_backdoor: false
+semantic_backdoor: true
+
+poison_image_id: 2775
+poison_image_id_2: 1605
+poison_label_swap: 17
+size_of_secret_dataset: 25
+size_of_secret_dataset_label_flip: 500
+poison_batch_len: 4
+poisoning_per_batch: 1
+poisoning_per_batch_contrastive: 1
+poisoning_per_batch_low: 0
+poisoning_per_batch_high: 10
+poison_test_repeat: 1000
+is_poison: true
+baseline: false
+scale_partial_weight: false
+random_compromise: false
+replace_batchnorm: false
+noise_level: 0.01
+norm_clip: true
+norm_bound: 3 
+grad_cam: false
+
+mask_contrastive: false
+is_frozen_params: true
+is_frozen_params_contrastive: false
+test_forgetting: false
+
+anticipate: false
+anticipate_steps: 2 
+anticipate_lr: 0.01
+anticipate_gamma: 0.998
+anticipate_local_epochs: 5 
+
+poison_epochs: [1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, 1809, 1810, 1811, 1812, 1813, 1814, 1815, 1816, 1817, 1818, 1819, 1820, 1821, 1822, 1823, 1824, 1825, 1826, 1827, 1828, 1829, 1830, 1831, 1832, 1833, 1834, 1835, 1836, 1837, 1838, 1839, 1840, 1841, 1842, 1843, 1844, 1845, 1846, 1847, 1848, 1849, 1850, 1851, 1852, 1853, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868, 1869, 1870, 1871, 1872, 1873, 1874, 1875, 1876, 1877, 1878, 1879, 1880, 1881, 1882, 1883, 1884, 1885, 1886, 1887, 1888, 1889, 1890, 1891, 1892, 1893, 1894, 1895, 1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910, 1911, 1912, 1913, 1914, 1915, 1916, 1917, 1918, 1919, 1920, 1921, 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929, 1930, 1931, 1932, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949]
+
+save_grad_epochs: [100]
+retrain_poison_contrastive: 10
+retrain_poison: 3
+retrain_poison_stage_3: 0
+scale_weights: 1
+batch_norm_param_scale_weights: 1
+new_model_scale_weights: 1
+global_model_scale_weight: 0
+
+contrastive_loss_down_scale_weight: 1
+contrastive_loss_scale_weight: 2
+contrastive_loss_weight: 1
+contrastive_loss_ne_weight: 0
+contrastive_loss_ps_weight: 0
+
+milestones:
+ - 3
+ - 5
+
+milestones_conrtastive:
+ - 3
+ - 5
+ - 7
+ - 9
+
+lr_gamma: 0.005 
+lr_gamma_contrastive: 0.01
+lr_gamma_stage_3: 0.1
+poison_lr: 0.01 
+poison_lr_stage_3: 0.1
+poison_lr_contrastive: 0.1 
+
+poison_momentum: 0.9
+poison_decay: 0.005  
+poison_step_lr: true
+poison_step_lr_contrastive: true
+clamp_value: 1.0
+alpha_loss: 1.0 # 1.0
+
+number_of_adversaries: 1
+poisoned_number: 2
+results_json: false
+
+s_norm: 5 
+s_norm_contrastive: 5
+diff_privacy: true 
+diff_privacy_contrastive: true
+diff_privacy_benign: false
+
+scale_weight_var: 3
+scale_weight_mean: 1.2
+
+gradmask_ratio: 1
+aggregate_all_layer: 1
+
+tied_params: [] 
+
+marks: '' 
+env: ''
+
+fake_participants_load: false
+fake_participants_file: data/reddit/updates_cifar.pt.tar
+fake_participants_save: false
+

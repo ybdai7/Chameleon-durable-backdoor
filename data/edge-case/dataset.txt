@@ -1,0 +1,1 @@
+edge-case dataset (southwest airline images) for CIFAR10 should be saved here
