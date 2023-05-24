@@ -10,13 +10,13 @@ Note: This repository largely follows the basic code structure of "How to backdo
 
 After installing visdom, you need to initialize visdom using:
 
-    python -m visdom.server -p port\_number
+    python -m visdom.server -p port_number
 
 The default port number is 8097 if not specify "-p port\_number". The visualization results can be found at localhost:port\_number.
 
 If you are running using remote server, you need to run the following line at local terminal:
 
-    ssh -L 1234:127.0.0.1:8097 username@server\_ip
+    ssh -L 1234:127.0.0.1:8097 username@server_ip
 
 Visualization result can be found at localhost:1234
 
