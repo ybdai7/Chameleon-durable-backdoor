@@ -25,10 +25,21 @@ To run the code, you can choose any command line from *commands.sh*. The results
 
 # Citation
 We appreciate it if you would please cite the following paper if you found the repository useful for your work:
-  
-    @article{dai2023chameleon,
-      title={Chameleon: Adapting to Peer Images for Planting Durable Backdoors in Federated Learning},
-      author={Dai, Yanbo and Li, Songze},
-      journal={arXiv preprint arXiv:2304.12961},
-      year={2023}
+
+
+    @InProceedings{pmlr-v202-dai23a,
+    title = 	 {Chameleon: Adapting to Peer Images for Planting Durable Backdoors in Federated Learning},
+    author =       {Dai, Yanbo and Li, Songze},
+    booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+    pages = 	 {6712--6725},
+    year = 	 {2023},
+    editor = 	 {Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, Sivan and Scarlett, Jonathan},
+    volume = 	 {202},
+    series = 	 {Proceedings of Machine Learning Research},
+    month = 	 {23--29 Jul},
+    publisher =    {PMLR},
+    pdf = 	 {https://proceedings.mlr.press/v202/dai23a/dai23a.pdf},
+    url = 	 {https://proceedings.mlr.press/v202/dai23a.html},
+    abstract = 	 {In a federated learning (FL) system, distributed clients upload their local models to a central server to aggregate into a global model. Malicious clients may plant backdoors into the global model through uploading poisoned local models, causing images with specific patterns to be misclassified into some target labels. Backdoors planted by current attacks are not durable, and vanish quickly once the attackers stop model poisoning. In this paper, we investigate the connection between the durability of FL backdoors and the relationships between benign images and poisoned images (i.e., the images whose labels are flipped to the target label during local training). Specifically, benign images with the original and the target labels of the poisoned images are found to have key effects on backdoor durability. Consequently, we propose a novel attack, Chameleon, which utilizes contrastive learning to further amplify such effects towards a more durable backdoor. Extensive experiments demonstrate that Chameleon significantly extends the backdoor lifespan over baselines by $1.2\times \sim 4\times$, for a wide range of image datasets, backdoor types, and model architectures.}
     }
+
