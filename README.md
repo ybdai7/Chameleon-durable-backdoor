@@ -1,6 +1,9 @@
 # Chameleon
 Official implementation of **Chameleon: Adapting to Peer Images for Planting Durable Backdoors in Federated Learning** (https://proceedings.mlr.press/v202/dai23a)
 
+# News
+- [2024.09.27] Another repo of ours (https://github.com/ybdai7/Backdoor-indicator-defense), which has a more clear code structure and focuses on backdoor detection, also implements Chameleon (participants/clients/ChameleonMaliciousClient.py). You may want to refer to that repo if needed. Remeber to pay attention to the difference between yaml files. 
+
 # Get started
 To get started, you need to first install relevant packages using:
   
