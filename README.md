@@ -26,6 +26,8 @@ Visualization result can be found at localhost:1234
 # Run the code
 To run the code, you can choose any command line from *commands.sh*. The results can then be found in visdom.
 
+For the edge-case datasets, you can acquire them following the instructions of https://github.com/ksreenivasan/OOD_Federated_Learning, which is the official repo of the Yes-you-can-really-backdoor-FL paper.
+
 # Citation
 We appreciate it if you would please cite the following paper if you found the repository useful for your work:
 
